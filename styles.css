@@ -1,3 +1,64 @@
+/* Main Page */
+html, body {
+  height: 100%; /* Make sure the body takes up the full height of the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+body {
+  background-color: #E2E2B6; /* Soft Pale Yellow for a light, neutral background */
+  color: #021526; /* Dark text for high contrast */
+  font-family: Arial, sans-serif; /* Example font */
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  min-height: 100%; /* Ensure the wrapper takes up at least 100% of the viewport height */
+}
+
+.main-content {
+  flex-grow: 1; /* Let the content grow to fill any available space */
+  margin: 4% 8%;
+  font-size: 20px;
+}
+
+.f-left {
+  float: left;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-left, .bio-right {
+  display: inline-block;
+  vertical-align: top;
+  margin: 8% 8%;
+  text-align: center;
+}
+
+.placeholder-img-bio {
+  width: 400px;
+  height: 400px;
+}
+
+.placeholder-img {
+  margin: 16px 16px;
+  width: 200px;
+  height: 200px;
+}
+
+/* Links and Interactive Text */
+a {
+  color: #6EACDA; /* Light Blue for links */
+}
+
+a:hover {
+  color: #03346E; /* Slightly darker blue on hover */
+}
+
 /* Navbar Styles */
 .navbar {
   background-color: #021526; /* Dark Blue */
@@ -27,7 +88,6 @@
   color: #E2E2B6; /* Soft Pale Yellow on hover */
 }
 
-/* Active Link Style */
 .navbar a.active {
   background-color: #6EACDA; /* Light Blue for the active link */
   color: #021526; /* Dark Blue for contrast with light blue */
@@ -35,91 +95,67 @@
   font-weight: bold; /* Optional: makes the active link bold for emphasis */
 }
 
-
-/* Main Page Content */
-html, body {
-  height: 100%; /* Make sure the body takes up the full height of the viewport */
-  margin: 0; /* Remove default margin */
+/* Contact Form */
+.contact-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  min-height: 100%; /* Ensure the wrapper takes up at least 100% of the viewport height */
+.contact-form label {
+  font-weight: bold;
+  color: #333;
 }
 
-.main-content {
-  flex-grow: 1; /* Let the content grow to fill any available space */
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
 }
 
-
-/* Main Page Background */
-body {
-  background-color: #E2E2B6; /* Soft Pale Yellow for a light, neutral background */
-  color: #021526; /* Dark text for high contrast */
-  font-family: Arial, sans-serif; /* Example font */
-  margin: 0;
-  padding: 0;
+.contact-form textarea {
+  height: 100px;
+  resize: none;
 }
 
-/* Links and Interactive Text */
-a {
-  color: #6EACDA; /* Light Blue for links */
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
-a:hover {
-  color: #03346E; /* Slightly darker blue on hover */
+.contact-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
 }
 
 /* Footer Styling */
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px;
   background-color: #021526; /* Dark background for footer */
   color: #E2E2B6; /* Light pale yellow text */
 }
 
-.footer-left, .footer-center, .footer-right {
-  flex: 1;
-  padding: 10px;
-}
-
-.footer-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-nav ul li {
-  margin-bottom: 10px;
-}
-
-.footer-nav a {
-  color: #6EACDA; /* Light Blue Links */
-  text-decoration: none;
-}
-
-.footer-nav a:hover {
-  color: #03346E; /* Darker blue on hover */
-}
-
-.social-media a {
-  color: #6EACDA; /* Light Blue for social links */
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-.social-media a:hover {
-  color: #03346E; /* Darker Blue on hover */
-}
-
-/* Footer text */
 footer p {
   margin: 5px 0;
   font-size: 14px;
 }
 
-/* Ensure the footer looks good on mobile */
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
