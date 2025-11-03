@@ -1,0 +1,128 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #021526; /* Dark Blue */
+  color: white; /* Text color for navbar */
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow to lift navbar */
+  border-bottom: 2px solid #03346E; /* Subtle contrast line */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li a {
+  display: block;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #03346E; /* Mid-to-dark blue on hover */
+  color: #E2E2B6; /* Soft Pale Yellow on hover */
+}
+
+/* Active Link Style */
+.navbar a.active {
+  background-color: #6EACDA; /* Light Blue for the active link */
+  color: #021526; /* Dark Blue for contrast with light blue */
+  border-radius: 4px; /* Optional: adds a rounded effect to the active link */
+  font-weight: bold; /* Optional: makes the active link bold for emphasis */
+}
+
+
+/* Main Page Content */
+html, body {
+  height: 100%; /* Make sure the body takes up the full height of the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  min-height: 100%; /* Ensure the wrapper takes up at least 100% of the viewport height */
+}
+
+.main-content {
+  flex-grow: 1; /* Let the content grow to fill any available space */
+}
+
+
+/* Main Page Background */
+body {
+  background-color: #E2E2B6; /* Soft Pale Yellow for a light, neutral background */
+  color: #021526; /* Dark text for high contrast */
+  font-family: Arial, sans-serif; /* Example font */
+  margin: 0;
+  padding: 0;
+}
+
+/* Links and Interactive Text */
+a {
+  color: #6EACDA; /* Light Blue for links */
+}
+
+a:hover {
+  color: #03346E; /* Slightly darker blue on hover */
+}
+
+/* Footer Styling */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #021526; /* Dark background for footer */
+  color: #E2E2B6; /* Light pale yellow text */
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  color: #6EACDA; /* Light Blue Links */
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #03346E; /* Darker blue on hover */
+}
+
+.social-media a {
+  color: #6EACDA; /* Light Blue for social links */
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-media a:hover {
+  color: #03346E; /* Darker Blue on hover */
+}
+
+/* Footer text */
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Ensure the footer looks good on mobile */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
