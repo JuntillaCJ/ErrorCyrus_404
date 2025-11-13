@@ -1,29 +1,40 @@
-/* Main Page */
+:root {
+  --color-primary: #021526;
+  --color-secondary: #03346E;
+  --color-accent: #6EACDA;
+  --color-neutral: #E2E2B6;
+}
+
 html, body {
-  height: 100%; /* Make sure the body takes up the full height of the viewport */
-  margin: 0; /* Remove default margin */
+  height: 100%;
 }
 
 body {
-  background-color: #E2E2B6; /* Soft Pale Yellow for a light, neutral background */
-  color: #021526; /* Dark text for high contrast */
-  font-family: Arial, sans-serif; /* Example font */
-}
-
-.page-wrapper {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  min-height: 100%; /* Ensure the wrapper takes up at least 100% of the viewport height */
+  flex-direction: column;
+  margin: 0;
+  background-color: var(--color-neutral);
+  color: var(--color-primary);
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .main-content {
-  flex-grow: 1; /* Let the content grow to fill any available space */
-  margin: 4% 8%;
-  font-size: 20px;
+  min-height: 100%;
+  margin: 5% 10%;
 }
 
 .f-left {
   float: left;
+}
+
+.margin-1 {
+  margin: 1%;
+}
+
+.margin-5 {
+  margin: 5%;
 }
 
 .bio {
@@ -39,33 +50,25 @@ body {
   text-align: center;
 }
 
-.placeholder-img-bio {
-  width: 400px;
-  height: 400px;
+.bio-img {
+  width: 384px;
+  height: 384px;
 }
 
-.placeholder-img {
-  margin: 16px 16px;
-  width: 200px;
-  height: 200px;
-}
-
-/* Links and Interactive Text */
 a {
-  color: #6EACDA; /* Light Blue for links */
+  color: var(--color-accent);
 }
 
 a:hover {
-  color: #03346E; /* Slightly darker blue on hover */
+  color: var(--color-secondary);
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: #021526; /* Dark Blue */
+  background-color: var(--color-primary);
   color: white; /* Text color for navbar */
   padding: 15px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow to lift navbar */
-  border-bottom: 2px solid #03346E; /* Subtle contrast line */
+  border-bottom: 2px solid var(--color-secondary); /* Subtle contrast line */
 }
 
 .navbar ul {
@@ -84,13 +87,13 @@ a:hover {
 }
 
 .navbar a:hover {
-  background-color: #03346E; /* Mid-to-dark blue on hover */
-  color: #E2E2B6; /* Soft Pale Yellow on hover */
+  background-color: var(--color-secondary); /* Mid-to-dark blue on hover */
+  color: var(--color-neutral); /* Soft Pale Yellow on hover */
 }
 
 .navbar a.active {
-  background-color: #6EACDA; /* Light Blue for the active link */
-  color: #021526; /* Dark Blue for contrast with light blue */
+  background-color: var(--color-accent); /* Light Blue for the active link */
+  color: var(--color-primary); /* Dark Blue for contrast with light blue */
   border-radius: 4px; /* Optional: adds a rounded effect to the active link */
   font-weight: bold; /* Optional: makes the active link bold for emphasis */
 }
@@ -147,18 +150,11 @@ a:hover {
   display: flex;
   justify-content: center;
   padding: 20px;
-  background-color: #021526; /* Dark background for footer */
-  color: #E2E2B6; /* Light pale yellow text */
+  background-color: var(--color-primary); /* Dark background for footer */
+  color: var(--color-neutral); /* Light pale yellow text */
 }
 
 footer p {
   margin: 5px 0;
   font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    text-align: center;
-  }
 }
