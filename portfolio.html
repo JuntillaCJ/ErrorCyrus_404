@@ -23,20 +23,30 @@
     <li>HTML</li>
     <li>CSS</li>
     <li>Javascript</li>
-    <li>C</li>
+    <li>C - I learned the fundamentals a years ago, but no concrete projects. Not counting guess the number rewrite, of course.</li>
   </ul>
   <h2>Featured Projects</h2>
   <ul>
-    <li>Guess the Number Game (Python) <a href="#">Github↗</a> <a href="#">Play↗</a></li>
-    <li>Hangman (Python) <a href="#">Github↗</a> <a href="#">Play↗</a></li>
-    <li>Blackjack (Python) <a href="#">Github↗</a> <a href="#">Play↗</a></li>
+    <li>Guess the Number Game (Javascript)</li>
+    <li>Hangman (Python) <a href="https://github.com/JuntillaCJ/Hangman">Github↗</a> <a href="https://colab.research.google.com/drive/1DXVvGJi4bpl432k4woiXez3R8wHUL7JD?usp=sharing">Play↗</a></li>
+    <li>Blackjack (Python) <a href="https://github.com/JuntillaCJ/BlackJack">Github↗</a> <a href="https://colab.research.google.com/drive/1AfjD93pgCj4z622G0edfGF38Jve9eBNz?usp=sharing">Play↗</a></li>
     <li>Harmony Heights Band Page (HTML) <a href="https://juntillacj.github.io/HarmonyHeights/">Site↗</a></li>
   </ul>
+  <h2>Guess the Number</h2>
+  <p>Guess a number from 1 to 100.</p>
+  <div id="guess-the-number" class="d-flex">
+    <input type="number" id="guessInput" placeholder="Enter guess" min="1" max="100">
+    <button onclick="checkGuess()">Guess</button>
+    <div id="feedback"></div>
+  </div>
+  
 </div>
 
-<footer class="footer">
+<footer class="footer d-flex center-flex-div">
   <p>&copy; 2025 Cyrus John Juntilla. All Rights Reserved.</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

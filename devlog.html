@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<div class="navbar">
+<div id="top" class="navbar">
 <ul>
   <li><a href="./index.html">Home</a></li>
   <li><a href="./about.html">About Me</a></li>
@@ -16,12 +16,62 @@
 </ul>
 </div>
 
-<div class="main-content">
-  <h1>Page Content</h1>
-  <p>Lorem ipsum dolor sit amet</p>
+<div class="main-content dev-log">
+  <h2>Tutorials</h2>
+  <a href="https://youtu.be/rkx5_MRAV3A">Python Hands-on Tutorial</a>
+  <h2>Dev Log</h2>
+  <ul class="mini-nav">
+    <li><a href="#entry1">Entry 1</a></li>
+    <li><a href="#entry2">Entry 2</a></li>
+    <li><a href="#entry3">Entry 3</a></li>
+  </ul>
+  <h3 id="entry1">Entry 1 - 2025/03/31</h3>
+  <p>The first high-level language that I messed around was JavaScript. When I then hopped on python, I noticed the naming conventions of variables and functions were different. In JavaScript, the convention is to use camel case for variables and functions, where the first letter of each word is capitalized except for the first word. For example, <code>getElementById()</code> and <code>myVariable</code>. In python, the convention is to use underscore to seperate words, like <code>my_function</code> and <code>name_list</code>.</p>
+  <hr>
+  <h3 id="entry2">Entry 2 - 2025/06/30</h3>
+  <p><a href="https://youtu.be/EnSu9hHGq5o">This particular video</a> is an eye opener to iteration, which is a core aspect in programming. In particular, it changed how I view iterations in python vs other languages. In other languages, you typically initialize an <code>i</code> variable for the index. In python, you actually iterate over an iterable directly. Compare the two:</p>
+  <pre><code>
+  for i in range(len(names)):
+      print(names[i])
+      
+  for name in names:
+      print(name)
+  </code></pre>
+  <p>The pythonic iteration is just more direct. Another case where you want a numbered list:</p>
+  <pre><code>
+  for i in range(len(names)):
+      print(i+1, names[i])
+      
+  for idx, name in enumerate(names, start=1):
+      print(idx, name)
+  </code></pre>
+  <p>Less thinking required because you get the variables directly rather than using <code>i</code> to get them.</p>
+  <hr>
+  <h3 id="entry3">Entry 3 - 2025/07/31</h3>
+  <p>Object-oriented programming is great. It effectively lets you create custom data types with their own attributes and methods. I however learned from <a href="https://youtu.be/o9pEzgHorH0">this video</a> that sometimes, it is completely unnecessary, and will just take up extra space. Taken from when I was making Blackjack:</p>
+  <pre><code>
+  class Card:
+      def __init__(self, rank, suit):
+          self.rank = rank
+          self.suit = suit
+      
+      def __str__(self):
+          return f"{self.rank} of {self.suit}
+  </code></pre>
+  <p>The code above is perfectly fine. It defines what a card object should be, and it knows how it should display itself when you call <code>print()</code> on it. In this situation though, it is completely unnecessary. Notice that this class definition <strong>has two methods, one of which is init</strong>. In this case, better to just make a function out of the non-init method.</p>
+  <pre><code>
+  def print_card(card):
+      rank = card[0]
+      suit = card[1]
+      return f"{rank} of {suit}"
+  </code></pre>
+  <p>There are much better examples out there, especially when the non-init method is not a magic method and has an argument to pass, which can also make the usage way less elegant. So it is nice to be aware of this before I have to make code for productions.</p>
+  <hr>
+  <br>
+  <a href="#top">Back to top</a>
 </div>
 
-<footer class="footer">
+<footer class="footer d-flex center-flex-div">
   <p>&copy; 2025 Cyrus John Juntilla. All Rights Reserved.</p>
 </footer>
 

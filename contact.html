@@ -17,20 +17,19 @@
 </div>
 
 <div class="main-content">
-  <form class="contact-form">
+  <form id="contact-form" class="contact-form d-flex">
+    <h2>Contact Me</h2>
     <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br>
+    <input type="text" id="name" name="name" required><br>
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br>
-    <label for="subject">Subject:</label><br>
-    <input type="text" id="subject" name="subject"><br>
+    <input type="text" id="subject" name="subject" required><br>
     <label for="message">Message:</label><br>
-    <textarea id="message" name="message"></textarea><br><br>
-    <input type="submit" value="Send">
+    <textarea id="message" name="message"></textarea required><br><br>
+    <button type="submit" value="Send" onclick="clearForm()">Send</button>
   </form>
 </div>
 
-<footer class="footer">
+<footer class="footer d-flex center-flex-div">
   <p>&copy; 2025 Cyrus John Juntilla. All Rights Reserved.</p>
 </footer>
 

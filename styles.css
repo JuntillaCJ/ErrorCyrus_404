@@ -21,8 +21,17 @@ body {
 }
 
 .main-content {
-  min-height: 100%;
+  height: auto;
   margin: 5% 10%;
+}
+
+.d-flex {
+  display: flex;
+}  
+
+.center-flex-div {
+  align-items: center;
+  justify-content: center;
 }
 
 .f-left {
@@ -37,22 +46,18 @@ body {
   margin: 5%;
 }
 
-.bio {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pfp-img {
+  width: 384px;
+  height: 384px;
 }
 
-.bio-left, .bio-right {
-  display: inline-block;
-  vertical-align: top;
-  margin: 8% 8%;
+.bio-right {
   text-align: center;
 }
 
-.bio-img {
-  width: 384px;
-  height: 384px;
+input {
+  height: 18px;
+  width: 100px;
 }
 
 a {
@@ -63,10 +68,17 @@ a:hover {
   color: var(--color-secondary);
 }
 
-/* Navbar Styles */
+.mini-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+/* Navbar */
 .navbar {
   background-color: var(--color-primary);
-  color: white; /* Text color for navbar */
+  color: white;
   padding: 15px 20px;
   border-bottom: 2px solid var(--color-secondary); /* Subtle contrast line */
 }
@@ -83,6 +95,7 @@ a:hover {
   display: block;
   color: white;
   padding: 10px 20px;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -98,26 +111,40 @@ a:hover {
   font-weight: bold; /* Optional: makes the active link bold for emphasis */
 }
 
+/* Guess The Number */
+#guess-the-number {
+  gap: 10px;
+}
+
 /* Contact Form */
 .contact-form {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-direction: column;
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: var(--color-secondary);
 }
 
 .contact-form label {
   font-weight: bold;
-  color: #333;
+  color: var(--color-primary);
 }
 
 .contact-form input, .contact-form textarea {
-  width: 100%;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
+  width: auto;
+  border: 2px solid var(--color-secondary);
   border-radius: 4px;
-  font-size: 1em;
-  transition: border-color 0.3s ease;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--color-neutral);
+  transition: border-color 0.2s ease;
 }
 
 .contact-form textarea {
@@ -126,35 +153,36 @@ a:hover {
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
-  border-color: #007bff;
+  border-color: var(--color-accent);
+  background-color: white;
   outline: none;
 }
 
 .contact-form button {
-  background: #007bff;
-  color: white;
+  background: var(--color-secondary);
+  color: var(--color-neutral);
   border: none;
-  padding: 10px 15px;
+  padding: 0.75rem 1.5rem;
   border-radius: 4px;
   font-size: 1em;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.2s ease;
 }
 
 .contact-form button:hover {
-  background: #0056b3;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
 }
 
-/* Footer Styling */
+/* Footer */
 .footer {
-  display: flex;
-  justify-content: center;
   padding: 20px;
-  background-color: var(--color-primary); /* Dark background for footer */
-  color: var(--color-neutral); /* Light pale yellow text */
+  background-color: var(--color-primary);
+  color: var(--color-neutral);
 }
 
-footer p {
+.footer p {
   margin: 5px 0;
   font-size: 14px;
 }
